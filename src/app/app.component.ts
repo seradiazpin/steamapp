@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  key="71A4F359AFAB66BE9799DBAFEA5B7169"
 }
