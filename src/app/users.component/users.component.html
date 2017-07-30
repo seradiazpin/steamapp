@@ -1,0 +1,7 @@
+<h4>{{userName}}</h4>
+<h5>{{userid}}</h5>
+<input [(ngModel)]="userName" type="text" placeholder="{{userName}}">
+<button (click)="findUser()">Find</button>
+<div *ngIf="userid">
+  <user [user_id]="userid"></user>
+</div>

@@ -1,0 +1,8 @@
+<div *ngIf="games">
+  <p>{{gameId| json}}</p>
+  <input auto-complete [(ngModel)]="gameId" [source]="games" list-formatter="name" [min-chars]="4" placeholder="min 3 char" [max-num-list]="30"/>
+</div>
+<div *ngIf="gameId && gameId.appid">
+  <game [gameId]="gameId.appid"></game>
+</div>
+

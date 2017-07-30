@@ -1,0 +1,7 @@
+<p>{{data.name}}</p>
+<img  src="{{data.icon}}" >
+<div class="progress hover-resize" style="height: 20px">
+  <div class="determinate" [style.width]="data.percent + '%'" >
+    <p style="margin: 0px">{{data.percent| number : '1.2-2'}}</p>
+  </div>
+</div>

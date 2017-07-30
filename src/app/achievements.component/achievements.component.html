@@ -1,0 +1,5 @@
+<div *ngIf="gameData">
+<div  *ngFor="let arch of game_info.availableGameStats.achievements; let i= index" class="col s2 m3 l2 xl2 center-align" >
+  <achievement [data]="changeData(i,arch.icon)" ></achievement>
+</div>
+</div>

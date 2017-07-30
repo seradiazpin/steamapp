@@ -1,0 +1,12 @@
+<div class="row" *ngIf="gameInfo && game" >
+
+  <div class="col s12 m12 l12 xl12">
+    <div class="parallax-container" style="width: 100%; height: 300px">
+      <div class="parallax responsive-img" ><img src="{{game.header_image}}"></div>
+    </div>
+
+    <p>{{game.name}}</p>
+    <achievements [game_info]="gameInfo" [game_id]="gameId"></achievements>
+  </div>
+</div>
+

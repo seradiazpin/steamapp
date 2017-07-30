@@ -1,0 +1,4 @@
+<div  *ngIf="game " >
+    <img class="responsive-img" src="{{game.header_image}}">
+    <p >Time : {{game_info.playtime_forever/60 | number : '1.2-2'}}</p>
+</div>

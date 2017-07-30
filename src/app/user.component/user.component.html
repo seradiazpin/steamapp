@@ -1,0 +1,31 @@
+<div *ngIf="show_friends && user && user_id && games">
+  <div class="row">
+    <h3>{{user.personaname}}</h3>
+    <div class="col s4">
+      <img src="{{user.avatarfull}}">
+    </div>
+    <p>Number of games : {{games.game_count}}</p>
+    <p>{{user_id}}</p>
+  </div>
+  <input type="text" [(ngModel)] =term >
+  <div class="row">
+    <div *ngFor="let game of games.games| paginate: { itemsPerPage: 50, currentPage: p }" class="col s4 m4 l4 xl2">
+      <game-simple [game_info]="game"></game-simple>
+    </div>
+
+  </div>
+  <div>
+    <pagination-controls  class="pagination waves-effect gray" (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+  <!--Friends-->
+</div>
+<div class="row" *ngIf="show_friends && friends">
+  <div *ngFor="let fri of friends" class="col s1 m1 l1">
+    <user [user_id]="fri.steamid" [show_friends]="false"></user>
+  </div>
+</div>
+
+<div *ngIf="!show_friends && user">
+  <img src="{{user.avatarmedium}}">
+</div>
